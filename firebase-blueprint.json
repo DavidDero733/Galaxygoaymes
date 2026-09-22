@@ -1,0 +1,39 @@
+{
+  "entities": {
+    "Post": {
+      "title": "Post",
+      "description": "A community comment or game request",
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "description": "User ID of the author"
+        },
+        "authorName": {
+          "type": "string",
+          "description": "Public display name of the author"
+        },
+        "content": {
+          "type": "string",
+          "description": "Text content of the post"
+        },
+        "type": {
+          "type": "string",
+          "enum": ["comment", "request"],
+          "description": "Type of the post"
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "Timestamp when the post was created (server timestamp)"
+        }
+      },
+      "required": ["userId", "authorName", "content", "type", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/posts/{postId}": {
+      "schema": { "$ref": "Post" },
+      "description": "Collection of forum posts"
+    }
+  }
+}

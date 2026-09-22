@@ -1,0 +1,6 @@
+{
+  "name": "Galaxy Games",
+  "description": "A nostalgic handheld console games platform inspired by the PS Vita era.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
